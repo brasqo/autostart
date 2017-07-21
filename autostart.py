@@ -5,6 +5,7 @@ import time
 
 """
 This script will open up all of my startup programs as wanted
+
 """
 
 #print(webbrowser._browsers)
@@ -33,8 +34,7 @@ ff = webbrowser.get('firefox')
 
 def main():
     '''Opens Chrome with 3 tabs: Pandora and 2 CW tabs'''
-    print('.')
-    print('..')
+
     print('...')
 
     webbrowser.open(pandoraSite) #opens a new browser
@@ -45,18 +45,13 @@ def main():
     time.sleep(4)
     webbrowser.open_new_tab(cwSite)  # opens new tab
     print('Opening another new tab: "ConnectWise"...')
-
-    print('.')
-    print('..')
     print('...')
-
     print('Finished opening all programs.')
 
 
 def openFF():
     '''Opens firefox with 3 tabs: slack and screenconnect'''
-    print('.')
-    print('..')
+    print("Starting your n00b autostart script...")
     print('...')
 
     ff.open_new_tab(slackSite)
@@ -67,22 +62,27 @@ def openFF():
 
 
 def openProg():
-    '''Opens wanted programs via subprocess'''
-    print('.')
-    print('..')
-    print('...')
-    time.sleep(4)
-    subprocess.Popen(simplenoteProg)
-    print('Opening program: "SimpleNote"...')
+    '''Opens wanted program via subprocess'''
 
     time.sleep(4)
     subprocess.Popen(outlookProg)
     print('Opening program: "Outlook"...')
 
 
+def openProg2():
+    '''Opens 2nd wanted program via subprocess'''
+
+    print('...')
+    time.sleep(4)
+    subprocess.Popen(simplenoteProg)
+    print('Opening program: "SimpleNote"...')
+
+
 if __name__ == '__main__':
     openFF()
     time.sleep(4)
     openProg()
+    time.sleep(4)
+    openProg2()
     time.sleep(4)
     main()
